@@ -19,6 +19,14 @@ public class Calcolatrice {
 		//sto forzando un 'a capo'
 		sc.nextLine();
 		
+		calcola(op1, op2, operazione);
+		
+		 
+		
+		
+	}
+
+	private static void calcola(double op1, double op2, String operazione) {
 		if (operazione.equals("+")) {
 			System.out.println(op1 + op2);
 		} 
@@ -34,10 +42,6 @@ public class Calcolatrice {
 		else {
 			System.out.println("Operazione NON disponibile!");
 		}
-		
-		 
-		
-		
 	}
 
 }
