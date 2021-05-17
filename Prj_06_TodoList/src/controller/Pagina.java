@@ -27,7 +27,10 @@ public class Pagina {
 		String pagina = "";
 		
 		for (int i = 0; i < note.length; i++) {
-			pagina += note[i].stampaNota();
+			if (note[i] != null)
+				pagina += note[i].stampaNota();
+			else
+				pagina += "XXXX";
 			pagina += "\n"+ "----------"+"\n";
 
 		}

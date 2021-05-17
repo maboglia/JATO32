@@ -17,14 +17,15 @@ public class GestioneNote {
 		
 		Scanner sc = new Scanner(System.in);
 
-		menu();
+//		menu();
 		
 		
-		int scelta = sc.nextInt();
+		int scelta = 0;
 		boolean gira = true;
 		
 		while(gira) {
-
+			menu();
+			scelta = sc.nextInt();
 			
 			switch (scelta) {
 			case 1:
@@ -35,7 +36,6 @@ public class GestioneNote {
 				System.out.println("La pagina sarà inserita alla posizione?");
 				int pNum = sc.nextInt();
 				t.addPagina(pNum, new Pagina());
-				
 				
 				
 				break;
@@ -113,7 +113,9 @@ public class GestioneNote {
 
 	private static String aggiungiNota(Scanner sc) {
 		System.out.println("Cosa scrivo nella nota?");
-		return sc.nextLine();
+		String s = sc.next();
+		sc.nextLine();
+		return s;
 	}
 
 }
