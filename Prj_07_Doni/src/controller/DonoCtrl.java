@@ -33,6 +33,7 @@ public class DonoCtrl {
 	public void stampaContenuto() {
 		//uso il foreach
 		for (Dono dono : doni) {
+			if (dono != null)
 			System.out.println(dono);
 		}
 	}
@@ -40,6 +41,7 @@ public class DonoCtrl {
 	public double valoreDoni() {
 		double totale = 0;
 		for (Dono dono : doni) {
+			if (dono != null)
 			totale += dono.getPrezzo();
 		}
 		return totale;
