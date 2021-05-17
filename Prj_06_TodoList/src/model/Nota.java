@@ -16,6 +16,14 @@ public class Nota {
 	}
 	//metodo che rappresenta la nota come una stringa, unendo tutte le proprietà
 	public String stampaNota() {
-		return this.completa + ": " + this.descrizione;
+		
+		String nota = "";
+		if (this.completa) {
+			nota = nota + "[*]";
+		} else {
+			nota = nota + "[ ]";
+		}
+		
+		return nota + " " + this.descrizione;
 	}
 }
