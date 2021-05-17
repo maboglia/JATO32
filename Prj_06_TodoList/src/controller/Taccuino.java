@@ -5,6 +5,7 @@ public class Taccuino {
 	private Pagina[] pagine;
 	
 	public Taccuino() {
+		System.out.println("Taccuino costruito");
 		this.pagine = new Pagina[10];
 	}
 	
