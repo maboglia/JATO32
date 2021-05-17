@@ -7,8 +7,8 @@ import model.Dado;
 public class GiocoDadi {
 
 	
-	static Dado d1 = new Dado((byte) 6, "bianco");
-	static Dado d2 = new Dado((byte) 6, "rosso");
+	static Dado d1 = new Dado();
+	static Dado d2 = new Dado("rosso");
 	static final int LANCI = 100;
 	static int successi = 0;
 	
