@@ -7,16 +7,15 @@ public class Gestionale {
 
 	public static void main(String[] args) {
 		
-		Argomento a1 = new Argomento();
+		Argomento primoArgomento = new Argomento();
+		primoArgomento.setTesto("operatori e tipi");
 
-		Argomento a2 = new Argomento();
+		Argomento a2 = new Argomento("variabili e costanti");
 
-		a1.setTesto("operatori e tipi");
-		a2.setTesto("variabili e costanti");
 		
 		Argomenti controller = new Argomenti();
 		
-		controller.getCollezione()[0] = a1;
+		controller.getCollezione()[0] = primoArgomento;
 		controller.getCollezione()[1] = a2;
 
 		for (Argomento a : controller.getCollezione()) {

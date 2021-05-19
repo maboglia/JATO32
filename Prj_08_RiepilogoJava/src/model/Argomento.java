@@ -5,6 +5,13 @@ public class Argomento {
 	//proprietà, attributo, field
 	private String testo;
 
+	public Argomento() {}
+	
+	public Argomento(String testo) {
+		this.testo = testo;
+	}
+	
+	
 	//metodo getter - accessore - serve per ritornare il valore della proprietà
 	//testo è di tipo String -> questo metodo quindi ritorna una stringa
 	public String getTesto() {
