@@ -11,7 +11,7 @@ public class GestioneRegistro {
 		
 		r.faiAppello();
 		
-		r.stampaAssenti();
+		r.stampaPresenti();
 		
 		r.stampaAssenti();
 

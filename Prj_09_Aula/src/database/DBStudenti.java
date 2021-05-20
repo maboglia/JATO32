@@ -8,6 +8,7 @@ public class DBStudenti {
 			new Studente("Alessandro", "Spanu"),
 			new Studente("Andrea", "Fagone"),
 			new Studente("Elena", "Bosio"),
+			new Studente("Rebecca", "ciglieri"),
 	};
 	
 	
