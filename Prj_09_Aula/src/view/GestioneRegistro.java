@@ -9,12 +9,23 @@ public class GestioneRegistro {
 		
 		Registro r = new Registro(DBStudenti.studenti);
 		
-		r.faiAppello();
+		//r.faiAppello();
 		
-		r.stampaPresenti();
+		//r.stampaPresenti();
 		
-		r.stampaAssenti();
+		//r.stampaAssenti();
 
+		System.out.println("Elenco originale");
+		r.stampaTutti();
+		System.out.println("eseguo l'ordinamento");
+		r.ordina();
+		r.ordina();
+		r.ordina();
+		r.ordina();
+		r.ordina();
+		System.out.println("Elenco ordinato (1 volta)");
+		r.stampaTutti();
+		
 	}
 
 }

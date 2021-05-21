@@ -66,4 +66,38 @@ public class Registro {
 		}
 	}
 	
+	public void ordina() {
+		//devo seguire una logica:
+		//1 setto una variabile boolean, scorrere l'elenco
+		boolean guardia = false;
+
+		for (int i = 0; i < studenti.length; i++) {
+			if (i < studenti.length -1) {
+				Studente corrente = studenti[i];
+				Studente successivo = studenti[i+1];
+				//2 confrontare una proprietà di ciascuno, p.es cognome a due 
+				int test = corrente.getCognome().compareTo(successivo.getCognome());
+				if (test > 0) {
+					//4 se non sono in ordine scambio i 2 studenti, quindi modifico il valore boolean
+					System.out.println("devi fare un altro giro");
+					//System.out.println(corrente.getCognome());
+					//System.out.println("con");
+					//System.out.println(successivo.getCognome());
+					Studente temp = corrente;
+					studenti[i] = successivo;
+					studenti[i+1] = temp;
+				}
+				//3 se li trovo già in ordine lascio così
+				//System.out.println("dato il cognome " + corrente.getCognome());
+				//System.out.println("dato il cognome " + successivo.getCognome());
+				//System.out.println("Il risultato del test è: " + test);
+				
+			}
+			//5 mi sposto alla coppia successiva
+		}
+		//6 finche arrivo all'ultima, quindi esco
+		//ripeto questo ciclo finché una var boolean mi dice che è tutto ordinato
+	}
+	
+	
 }

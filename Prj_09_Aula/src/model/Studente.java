@@ -15,6 +15,9 @@ public class Studente {
 		return "" + nome + ", " + cognome.toUpperCase() + "";
 	}
 	
+	public String getCognome() {
+		return this.cognome;
+	}
 	
 	
 	

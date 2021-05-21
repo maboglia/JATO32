@@ -4,7 +4,7 @@ public class EsempioOverload {
 
 	static int a = 25;
 	static int b = 29;
-	static int[] voti = {a,b, b, a, 23, 45, 56, 2, 9};
+	static int[] voti = {a,b, b, a, 23, 45, 56, 2, 9, 45, 56, 2, 9};
 	static int[] ordinato = new int[voti.length];
 
 	public static void main(String[] args) {
