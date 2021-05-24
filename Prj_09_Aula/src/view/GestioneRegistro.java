@@ -1,30 +1,31 @@
 package view;
 
 import database.DBStudenti;
-import model.Registro;
+import model.*;
 
 public class GestioneRegistro {
 
 	public static void main(String[] args) {
 		
-		Registro r = new Registro(DBStudenti.studenti);
+		Registro2 r = new Registro2(DBStudenti.studenti);
 		
-		//r.faiAppello();
+		r.faiAppello();
+		System.out.println("-----------PRESENTI----------");
+		r.stampaPresenti();
+		System.out.println("-----------PRESENTI----------");
 		
-		//r.stampaPresenti();
-		
-		//r.stampaAssenti();
+		r.stampaAssenti();
 
 		System.out.println("Elenco originale");
-		r.stampaTutti();
+//		r.stampaTutti();
 		System.out.println("eseguo l'ordinamento");
-		r.ordina();
-		r.ordina();
-		r.ordina();
-		r.ordina();
-		r.ordina();
+//		r.ordina();
+//		r.ordina();
+//		r.ordina();
+//		r.ordina();
+//		r.ordina();
 		System.out.println("Elenco ordinato (1 volta)");
-		r.stampaTutti();
+//		r.stampaTutti();
 		
 	}
 
