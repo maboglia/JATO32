@@ -1,5 +1,6 @@
 package model;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Ordine {
@@ -11,11 +12,13 @@ public class Ordine {
 	private ArrayList<Pizza> pizze;
 	private int numOrdine;
 	private double prezzoTotale;
+	private LocalDateTime dataOrdine;
 	
 	public Ordine() {
 		this.pizze = new ArrayList<>();
 		this.prezzoTotale = 0;
 		this.numOrdine = contatore++;
+		this.dataOrdine = LocalDateTime.now();
 	}
 
 	public ArrayList<Pizza> getPizze() {
@@ -39,7 +42,19 @@ public class Ordine {
 
 	@Override
 	public String toString() {
-		return "Ordine [pizze=" + pizze + ", numOrdine=" + numOrdine + ", prezzoTotale=" + prezzoTotale + "]";
+		
+		StringBuilder sb = new StringBuilder("Ordine n.ro: " + numOrdine);
+		sb.append("\n");
+		sb.append("Data ordine: " + dataOrdine);
+		sb.append("\n");
+		
+		for (Pizza pizza : pizze) {
+			sb.append(pizza + "\n");
+		}
+		
+		sb.append("Il totale dell'ordine: " + getPrezzoTotale());
+		
+		return sb.toString();
 	}
 	
 	
