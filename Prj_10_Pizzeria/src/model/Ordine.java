@@ -10,17 +10,23 @@ public class Ordine {
 	
 	//variabili di istanza - appartengono agli oggetti
 	private ArrayList<Pizza> pizze;
+	private ArrayList<Bevanda> bevande;
 	private int numOrdine;
 	private double prezzoTotale;
 	private LocalDateTime dataOrdine;
 	
 	public Ordine() {
 		this.pizze = new ArrayList<>();
+		this.bevande = new ArrayList<>();
 		this.prezzoTotale = 0;
 		this.numOrdine = contatore++;
 		this.dataOrdine = LocalDateTime.now();
 	}
 
+	public ArrayList<Bevanda> getBevande() {
+		return bevande;
+	}
+	
 	public ArrayList<Pizza> getPizze() {
 		return pizze;
 	}
@@ -35,6 +41,10 @@ public class Ordine {
 		for (Pizza pizza : pizze) {
 			tot += pizza.getPrezzo();
 		}
+		for (Bevanda b : bevande) {
+			tot += b.getPrezzo();
+		}
+
 		this.prezzoTotale = tot;
 		
 		return prezzoTotale;
@@ -51,6 +61,12 @@ public class Ordine {
 		for (Pizza pizza : pizze) {
 			sb.append(pizza + "\n");
 		}
+		
+		for (Bevanda b : bevande) {
+			sb.append(b + "\n");
+		}
+		
+		
 		
 		sb.append("Il totale dell'ordine: " + getPrezzoTotale());
 		

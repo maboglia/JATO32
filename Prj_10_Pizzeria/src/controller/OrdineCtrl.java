@@ -1,5 +1,6 @@
 package controller;
 
+import model.Bevanda;
 import model.Ordine;
 import model.Pizza;
 
@@ -16,6 +17,12 @@ public class OrdineCtrl {
 		Pizza p = new Pizza(nome, prezzo);
 		ordine.getPizze().add(p);
 	}
+
+	public void addBevanda(String nome, double prezzo) {
+		Bevanda b = new Bevanda(nome, prezzo);
+		ordine.getBevande().add(b);
+	}
+	
 	
 	public Ordine chiudiOrdine() {
 		ordine.getPrezzoTotale();
