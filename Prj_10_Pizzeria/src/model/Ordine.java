@@ -1,6 +1,7 @@
 package model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Ordine {
@@ -52,10 +53,10 @@ public class Ordine {
 
 	@Override
 	public String toString() {
-		
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("d/M/YYYY");
 		StringBuilder sb = new StringBuilder("Ordine n.ro: " + numOrdine);
 		sb.append("\n");
-		sb.append("Data ordine: " + dataOrdine);
+		sb.append("Data ordine: " + dtf.format(dataOrdine));
 		sb.append("\n");
 		
 		for (Pizza pizza : pizze) {
