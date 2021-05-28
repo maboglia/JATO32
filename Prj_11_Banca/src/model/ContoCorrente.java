@@ -13,6 +13,9 @@ public class ContoCorrente {
 	private ArrayList<Cliente> titolari;
 	private ArrayList<Movimento> movimenti;
 
+	public int getNumero() {
+		return numero;
+	}
 	
 	public ContoCorrente() {
 		System.out.println("Genero nuovo conto corrente:");
@@ -52,5 +55,8 @@ public class ContoCorrente {
 		return this.saldo;
 	}
 
+	public ArrayList<Movimento> getMovimenti() {
+		return movimenti;
+	}
 	
 }
