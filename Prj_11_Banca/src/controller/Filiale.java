@@ -14,11 +14,14 @@ public class Filiale {
 		this.nomeFiliale = nomeFiliale;
 	}
 	
-	public void addCliente(String nomeNuovoCliente) {
+	public Cliente addCliente(String nomeNuovoCliente) {
 		//aggiunge nuovo cliente al db
 		ArrayList<Cliente> clienti = AnagraficaClienti.getClienti();
-		clienti.add(new Cliente(nomeNuovoCliente));
+		Cliente nuovo = new Cliente(nomeNuovoCliente);
+		clienti.add(nuovo);
+		return nuovo;
 	}
+	
 	//overload: più metodi con lo stesso nome, ma con firma (lista parametri) differente
 	public void addCliente(Cliente c) {
 		//aggiunge nuovo cliente al db

@@ -6,10 +6,10 @@ public class ContoCorrente {
 
 	//contatore static : appartiene alla classe
 	
-	private int counter = 1;
+	private static int counter = 1;
 	
-	private double saldo;
 	private int numero;
+	private double saldo;
 	private ArrayList<Cliente> titolari;
 	private ArrayList<Movimento> movimenti;
 
