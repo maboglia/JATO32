@@ -23,17 +23,30 @@
 	 
 	 switch(pagina){
 	 	case "addLibro":
-	 	//addLibro.jsp	
+		%>
+			<%@ include file="addLibro.jsp" %>
+		<%
 	 	break;
 	 	case "listLibro":
-	 	//listLibro.jsp	
+		%>
+			<%@ include file="listLibro.jsp" %>
+		<%
 	 	break;
 	 	case "cart":
-	 	//cart.jsp	
+		%>
+			<%@ include file="cart.jsp" %>
+		<%
 	 	break;
 	 	case "home":
-	 	//home.jsp	
+		%>
+			<%@ include file="home.jsp" %>
+		<%
 	 	break;
+	 	case "viewLibro":
+			%>
+			<%@ include file="viewLibro.jsp" %>
+		<%	 		
+	 	break;	
 	 }
 		 
  

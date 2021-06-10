@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Libreria online</title>
+<link rel="stylesheet" href="css/stile.css">
 </head>
 <body>
 
