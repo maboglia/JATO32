@@ -23,13 +23,17 @@ public class RouterCtrl extends HttpServlet {
 		
 		//qui inizia il doc html
 		request.getRequestDispatcher("header.jsp").include(request, response);
+		
+		
 		//aggiungi form
 		request.getRequestDispatcher("form.html").include(request, response);
 		
-		//passare alla vista l'elenco dei todo
-		request.setAttribute("elenco", tc.getTodos());
-		request.getRequestDispatcher("list.jsp").include(request, response);
-		
+		if (tc.getTodos().size() > 0) {
+			response.getWriter().append("<h1>Elenco todo</h1>");
+			//passare alla vista l'elenco dei todo
+			request.setAttribute("elenco", tc.getTodos());
+			request.getRequestDispatcher("list.jsp").include(request, response);
+		}
 		//chiudo con il footer
 		request.getRequestDispatcher("footer.jsp").include(request, response);
 		
