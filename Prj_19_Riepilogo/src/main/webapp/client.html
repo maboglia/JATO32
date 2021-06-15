@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client</title>
+    <style>img { width: 100px; height: 70px;}</style>
+</head>
+<body>
+    
+<ul id="lista">
+
+</ul>
+
+
+
+<script>
+
+    const URL = "http://localhost:8080/Prj_19_Riepilogo/libri";
+    const URL2 = "https://restcountries.eu/rest/v2/region/europe";
+    var output = "";
+    // 
+    fetch(URL2).then(r=>r.json()).then(d=>{
+        
+        for (const paese of d) {
+            output += "<li><img src='" + paese.flag + "'>" + paese.name + "</li>";
+        }
+
+        document.getElementById("lista").innerHTML = output;
+
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</script>
+
+
+
+
+
+</body>
+</html>
