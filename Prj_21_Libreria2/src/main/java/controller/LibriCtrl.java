@@ -3,6 +3,8 @@ package controller;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,7 +30,7 @@ public class LibriCtrl extends HttpServlet {
 		Collections.sort(ld.getLibri());
 		
 		for (Pubblicazione l : ld.getLibri()) {
-			System.out.println(l);
+			//System.out.println(l);
 		}
 	
 		Comparator<Pubblicazione> compLibri = new Comparator<Pubblicazione>() {
@@ -43,9 +45,20 @@ public class LibriCtrl extends HttpServlet {
 		Collections.sort(ld.getLibri(), compLibri);
 	System.out.println("riordino----------------------------------");	
 		for (Pubblicazione l : ld.getLibri()) {
-			System.out.println(l);
+		//	System.out.println(l);
 		}
-			
+		
+		List<Pubblicazione> ll= ld.getLibri()
+			.stream()
+			.filter(l->l.getPrezzo()<25)
+			.filter(l->l.getPrezzo()>4)
+			.collect(Collectors.toList());
+		
+		
+		for (Pubblicazione pubblicazione : ll) {
+			System.out.println(ll);
+		}
+		
 		// TODO Auto-generated method stub
 		response.getWriter().append("Sto ragionando...");
 	}
