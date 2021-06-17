@@ -16,25 +16,32 @@ import model.Libro;
 @WebServlet("/libri")
 public class Libri extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+       LibroDAO ld;
     /**
      * @see HttpServlet#HttpServlet()
      */
     public Libri() {
         super();
-        // TODO Auto-generated constructor stub
+        ld = new LibroDAO();
+        
     }
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		LibroDAO ld = new LibroDAO();
-		System.out.println(ld.findAll());
-		Libro l = ld.findAll().get(4);
-		ld.addLibro(l);
+//		System.out.println(ld.findAll());
+//		Libro l = ld.findAll().get(4);
+//		ld.addLibro(l);
 //		ld.deleteLibro(25);
 //		l.setPagine(1500);
 //		ld.updateLibro(l);
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		request.setAttribute("libri", ld.findAll());
+		request.getRequestDispatcher("Books.jsp").forward(request, response);
+		
+		
+		
+		
 	}
 
 	
@@ -42,5 +49,6 @@ public class Libri extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-
+	
+	
 }

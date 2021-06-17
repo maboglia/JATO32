@@ -18,7 +18,7 @@ public class LibroDAO {
 	public ArrayList<Libro> findAll() {
 		
 		try {
-			stat = db.connetti().createStatement();//statement è oggetto che porta la query al db
+			stat = db.getConn().createStatement();//statement è oggetto che porta la query al db
 			
 			String sql = "select * from libro";
 			rs = stat.executeQuery(sql);
@@ -49,7 +49,7 @@ public class LibroDAO {
 	
 	public void addLibro(Libro l) {
 		try {
-			stat = db.connetti().createStatement();
+			stat = db.getConn().createStatement();
 			int i = stat.executeUpdate("INSERT INTO `libro` (`id`, `titolo`, `prezzo`, `prezzo_iva`, `pagine`, `editore_id`) VALUES (NULL, '"+
 								l.getTitolo()+"',"+l.getPrezzo()+" ,"+l.getPrezzo_iva()+" ,"+l.getPagine()+" ,"+l.getEditore_id()+" )");
 			System.out.println("Libri inseriti: " + i);
@@ -61,7 +61,7 @@ public class LibroDAO {
 	
 	public void deleteLibro(int id) {
 		try {
-			stat = db.connetti().createStatement();
+			stat = db.getConn().createStatement();
 			int i = stat.executeUpdate("Delete from libro where id = " + id);
 			System.out.println("Libri eliminati: " + i);
 		} catch (SQLException e) {
@@ -72,7 +72,7 @@ public class LibroDAO {
 	
 	public void updateLibro(Libro l) {
 		try {
-			stat = db.connetti().createStatement();
+			stat = db.getConn().createStatement();
 			int i = stat.executeUpdate("update `libro` set"
 					+ " `titolo` = '"+l.getTitolo()+"',"
 					+ " `prezzo`="+l.getPrezzo()+", "
