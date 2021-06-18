@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import database.LibroDAO;
+import model.Libro;
 
 /**
  * Servlet implementation class Libri
@@ -45,7 +46,21 @@ public class Libri extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
+		if (request.getParameter("titolo")!=null) {
+			
+			String titolo = request.getParameter("titolo");
+			double prezzo = Double.parseDouble(   request.getParameter("prezzo"));
+			double prezzo_iva = Double.parseDouble(request.getParameter("prezzo_iva"));
+			int pagine = Integer.parseInt( request.getParameter("pagine"));
+			int editore_id =Integer.parseInt( request.getParameter("editore_id"));
+			
+			Libro l = new Libro(0, titolo, pagine, editore_id, prezzo_iva, prezzo);
+			
+			ld.addLibro(l);
+		}
+
+		
 		doGet(request, response);
 	}
 	
