@@ -34,10 +34,10 @@ public class Libri extends HttpServlet {
 //		ld.deleteLibro(25);
 //		l.setPagine(1500);
 //		ld.updateLibro(l);
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		request.setAttribute("libri", ld.findAll());
 		//request.getRequestDispatcher("Books.jsp").forward(request, response);
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		
 	}

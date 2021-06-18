@@ -7,47 +7,35 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import database.LibroDAO;
-import model.Libro;
-
 /**
- * Servlet implementation class Libri
+ * Servlet implementation class Libri2
  */
-@WebServlet("/libri")
-public class Libri extends HttpServlet {
+@WebServlet("/tuttilibri")
+public class Libri2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       LibroDAO ld;
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Libri() {
+    public Libri2() {
         super();
-        ld = new LibroDAO();
-        
+        // TODO Auto-generated constructor stub
     }
 
-	
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		System.out.println(ld.findAll());
-//		Libro l = ld.findAll().get(4);
-//		ld.addLibro(l);
-//		ld.deleteLibro(25);
-//		l.setPagine(1500);
-//		ld.updateLibro(l);
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
-		request.setAttribute("libri", ld.findAll());
-		//request.getRequestDispatcher("Books.jsp").forward(request, response);
-		
-		
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-
+		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-	
-	
+
 }
