@@ -12,6 +12,11 @@
 
     <h1>Libri</h1>
     
+    <%@ include file="form_libro.jsp" %>
+    
+    
+    
+    
     <ul>
     
     <%ArrayList<Libro> libri = (ArrayList<Libro>)request.getAttribute("libri"); %>

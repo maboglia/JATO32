@@ -2,11 +2,8 @@ package database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
-import model.Libro;
 
 /**
  * 
@@ -14,10 +11,10 @@ import model.Libro;
  *
  */
 public class DB {
-	private final String DB_NAME = "generation";
-	private final String HOST = "jdbc:mysql://localhost:8889/" + DB_NAME;// host completo
-	private final String USER = "app_generation";
-	private final String PASS = "tss_generation2021";
+	private final String DB_NAME = "Its2020";
+	private final String HOST = "jdbc:mysql://localhost:3306/" + DB_NAME;// host completo
+	private final String USER = "Its2020";
+	private final String PASS = "Its2020";
 	
 	
 	private Connection conn = null;// è la connessione al db

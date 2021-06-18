@@ -23,6 +23,9 @@ public class LibroDAO {
 			String sql = "select * from libro";
 			rs = stat.executeQuery(sql);
 			
+			//svuoto l'AL di libri
+			libri.clear();
+			
 			while (rs.next()) {
 				int id = rs.getInt("id");
 				int pagine = rs.getInt("pagine");

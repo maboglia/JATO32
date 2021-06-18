@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dal.LibroDAO;
-import model.Libro;
 import model.Pubblicazione;
 
 /**
@@ -56,7 +55,7 @@ public class LibriCtrl extends HttpServlet {
 		
 		
 		for (Pubblicazione pubblicazione : ll) {
-			System.out.println(ll);
+			System.out.println(pubblicazione);
 		}
 		
 		// TODO Auto-generated method stub

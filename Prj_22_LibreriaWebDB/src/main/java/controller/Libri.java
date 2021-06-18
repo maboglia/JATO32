@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import database.LibroDAO;
-import model.Libro;
 
 /**
  * Servlet implementation class Libri
