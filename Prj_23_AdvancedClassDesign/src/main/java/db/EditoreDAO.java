@@ -1,6 +1,7 @@
 package db;
 
 import java.util.List;
+import java.util.Map;
 
 import model.Editore;
 
@@ -23,6 +24,7 @@ public interface EditoreDAO {
 
 	//R: Read - Retrieve
 	List<Editore> getAll();
+	Map<Integer, Editore> getAllEditori();
 	Editore getOneById(int id);
 	Editore getOneByName(String name);
 	

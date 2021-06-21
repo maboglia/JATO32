@@ -6,7 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import model.Editore;
 
@@ -63,8 +65,9 @@ public class EditoreDAOImpl implements EditoreDAO {
 
 	@Override
 	public Editore getOneById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return getAllEditori().get(id);
+		
 	}
 
 	@Override
@@ -83,6 +86,28 @@ public class EditoreDAOImpl implements EditoreDAO {
 	public void delEditoreById(int id) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public Map<Integer, Editore> getAllEditori() {
+		
+		Map<Integer, Editore> editori = new HashMap<>();
+		
+		try {
+			rs = db.getConn().createStatement().executeQuery(FIND_ALL);
+		
+			while (rs.next()) {
+				Editore e = new Editore();
+				e.setId(rs.getInt("id"));
+				e.setNome(rs.getString("nome"));
+				
+				editori.put(e.getId(), e);//come chiave l'id, come valore l'intero Editore
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return editori;
 	}
 
 }

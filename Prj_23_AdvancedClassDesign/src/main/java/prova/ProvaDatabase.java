@@ -16,13 +16,22 @@ public class ProvaDatabase {
 		EditoreDAO ed = new EditoreDAOImpl();
 		
 		//ed.addEditore(new Editore(20, "Feltrinelli"));
-		ed.getAll().forEach(e -> System.out.println(e.getNome()));
+		//ed.getAll().forEach(e -> System.out.println(e));
 		
 		Set<Editore> nomi = new HashSet<>(ed.getAll());
 		
 		System.out.println("--------editori ordinati-------");
 		
-		nomi.forEach(n -> System.out.println(n.getNome()));
+		//nomi.forEach(n -> System.out.println(n.getNome()));
+		
+		System.out.println(ed.getOneById(3).getNome());//Ei
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
