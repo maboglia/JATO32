@@ -8,4 +8,16 @@ public class Automobile extends Veicolo implements Motorizzata {
 
 	}
 
+	@Override
+	public void tipoAlimentazione() {
+		System.out.println("A");
+		
+	}
+
+	@Override
+	public double capacitaSerbatoio() {
+		// TODO Auto-generated method stub
+		return 40;
+	}
+
 }

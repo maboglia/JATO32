@@ -42,19 +42,30 @@ public class ProvaVeicoli {
 		
 		System.out.println(pv.motorizzati.size());
 		
-		for (Veicolo v : pv.veicoli) {
-			
-			if (v instanceof Motorizzata) {
-				System.out.println(((Motorizzata) v).RUMORE);
-				System.out.println("nel veicolo puoi mettere carburante");
-			} else {
-				System.out.println("nel veicolo NON puoi mettere carburante");
-				
-			}
-
-			
-			
-		}
+//		for (Veicolo v : pv.veicoli) {
+//			
+//			if (v instanceof Motorizzata) {
+//				System.out.println(((Motorizzata) v).RUMORE);
+//				System.out.println("nel veicolo puoi mettere carburante");
+//			} else {
+//				System.out.println("nel veicolo NON puoi mettere carburante");
+//				
+//			}
+//
+//			
+//			
+//		}
+		
+		for (Veicolo v : pv.veicoli) {System.out.println("Il veicolo v " + v);}
+		
+		System.out.println("...............................................");
+		
+		//functional programming in java, con uso delle interfacce funzionali
+		pv.veicoli.forEach(v -> System.out.println("Il veicolo v " + v));
+		
+		
+		
+		
 		
 		
 	}
