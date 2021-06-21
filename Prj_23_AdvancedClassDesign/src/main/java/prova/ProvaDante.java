@@ -32,13 +32,10 @@ public class ProvaDante {
 				temp = temp.replace('“', ' ');
 				temp = temp.replace('”', ' ');
 				temp = temp.replace('’', '\'');
-
-								
-				
-
 				
 				temp = temp.trim();
 				
+				temp = temp.toUpperCase();
 				
 				if (temp.length() > 3 ) {
 					totString.add(temp);
@@ -49,7 +46,7 @@ public class ProvaDante {
 			System.out.println(totString.size());
 			System.out.println(setString.size());
 			
-			setString.forEach(parola -> System.out.println(parola));
+			//setString.forEach(parola -> System.out.println(parola));
 			
 			
 		} catch (FileNotFoundException e) {
