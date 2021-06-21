@@ -27,17 +27,17 @@ public class DB {
 	private void connetti() {
 		if (this.conn == null) {
 			try {
-				Class.forName("com.mysql.cj.jdbc.driver");
+				//Class.forName("com.mysql.cj.jdbc.driver");
 				this.conn = DriverManager.getConnection(HOST, USER, PASS);
 			} catch (SQLException e) {
 
 				System.err.println("Si è verificato un problema nella connessione: " + e.getMessage());
 				// e.printStackTrace();
 			} // gestore di driver
- catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+// catch (ClassNotFoundException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
 		}
 	}
 
@@ -54,6 +54,10 @@ public class DB {
 		return conn;
 
 	}
-	
+	public static void main(String[] args) {
+		DB db = new DB();
+		db.connetti();
+		System.out.println("ciao");
+	}
 }
 
