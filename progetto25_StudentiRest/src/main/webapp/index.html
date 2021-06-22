@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Studenti</title>
+</head>
+<body>
+
+<h1>Studenti</h1>
+
+<form action="studenti" method="post"> <!-- questo è l'indirizzo-->
+<input type="submit" value="chiama">
+
+</form>
+
+<script type="text/javascript">
+var url = 'http://localhost:9090/Progetto25_StudentiRest/studenti';
+
+//fetch --> dato un url(studenti) fa la chiamata, 
+//then --> con quello che gli ritorna fa qualcosa (s)
+//il 2 then prende quel s e lo stampa in console
+
+fetch(url).then(s => s.json()).then(s => document.write(s.nome));
+
+
+
+</script>
+
+</body>
+</html>
