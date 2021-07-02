@@ -7,6 +7,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import com.mysql.cj.xdevapi.JsonArray;
+
 /**
  * Servlet implementation class Libri2
  */
@@ -27,7 +32,14 @@ public class Libri2 extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		JSONArray json = new JSONArray();
+		
+		JSONObject obj = new JSONObject();
+		obj.put("titolo", "Il cane");
+		json.put(obj);
+		
+		response.getWriter().append(json.toString());
 	}
 
 	/**
