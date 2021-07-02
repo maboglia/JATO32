@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<ul id="categorie"></ul>
+
+<ul id="prodotti"></ul>
+
+<script type="text/javascript">
+
+const listaCategorie = document.getElementById("categorie");
+const listaProdotti = document.getElementById("prodotti");
+
+fetch("http://localhost:8080/Prj_28_AlimentiREST_MVC/api/categorie")
+	.then(categorie => categorie.json())
+	.then(categorie => {
+		for (let cat of categorie){
+			let li = document.createElement("li");
+			li.innerText=cat.categoria;
+			li.onclick=function(){prodottiByCat(cat.categoria)};
+			listaCategorie.appendChild(li);
+		}
+	});
+
+function prodottiByCat(cat){
+	fetch("http://localhost:8080/Prj_28_AlimentiREST_MVC/api/alimentibycat?cat="+cat)
+	.then(prod => prod.json())
+	.then(prodotti => {
+		listaProdotti.innerHTML = '';
+		
+		for (let prodotto of prodotti){
+			let li = document.createElement("li");
+			li.innerText=prodotto.prodotto;
+			listaProdotti.appendChild(li);
+		}
+	});
+}
+
+
+</script>
+
+
+
+</body>
+</html>
