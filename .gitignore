@@ -32,3 +32,6 @@ Prj_05_Giochini/.attach_pid5273
 Prj_06_TodoList/schema.ucls
 Servers/*
 Servers/Tomcat v9.0 Server at localhost-config/server.xml
+*.settings
+*.lst
+*/target/*
