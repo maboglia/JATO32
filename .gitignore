@@ -35,3 +35,6 @@ Servers/Tomcat v9.0 Server at localhost-config/server.xml
 *.settings
 *.lst
 */target/*
+*/.mvn/*
+*.cmd
+mvnw

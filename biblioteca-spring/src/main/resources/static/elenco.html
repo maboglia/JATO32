@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Biblioteca</title>
+</head>
+<body>
+
+	<a href="index.html">Home</a>
+	<h1>Elenco libri</h1>
+	
+<table id="elenco">
+  <tr>
+    <th>Titolo</th>
+    <th>Editore</th>
+  </tr>
+</table>
+
+
+<script>
+
+	const tabella = document.getElementById("elenco");
+	
+	const URL = "/api/libri/all";
+
+	fetch(URL).then(j => j.json()).then(libri => 
+	{
+		for(let libro of libri){//scorro l'intera collezione di libri
+			let tr = document.createElement('tr');//creo la riga
+			let td = document.createElement('td');//creo la cella
+			td.innerHTML = libro.titolo;//metto il valore nella cella
+			
+			tr.appendChild(td);//aggiungo la cella alla riga
+			
+			let td2 = document.createElement('td');//creo la cella
+			td2.innerHTML = libro.editore_id;//metto il valore nella cella
+			
+			tr.appendChild(td2);//aggiungo la cella alla riga
+			
+			tabella.appendChild(tr);//aggiungo la riga alla tabella
+			
+		}
+	}
+	
+	);
+
+</script>
+
+	
+</body>
+</html>
