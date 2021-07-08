@@ -16,7 +16,7 @@ public class LibroMVC {
 	private LibroService ls;
 	
 	@RequestMapping("/libro/{id}")
-	String getOne(@PathVariable("id") int id) {
+	public String getOne(@PathVariable("id") int id) {
 		Libro l = ls.trovaUno(id);
 		return "dettaglio";
 	}
