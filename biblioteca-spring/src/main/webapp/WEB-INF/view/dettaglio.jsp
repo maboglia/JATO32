@@ -1,8 +1,5 @@
 <%@ include file="header.jsp" %>
 
-
-    <a href="index.html">Home</a>
-    <a href="elenco.html">Elenco</a>
     
     <h1>Dettaglio Libro</h1>
   
@@ -14,7 +11,8 @@
         <p class="card-text">Pagine: ${libro.pagine}</p>
     <p class="card-text">Editore: ${libro.editore_id}</p>
     <p class="card-text">Prezzo Iva: ${libro.prezzo_iva}</p>
-    <p class="card-text">Prezzo: ${libro.prezzo}</p>  <a href="#" class="btn btn-primary">Go somewhere</a>
+    <p class="card-text">Prezzo: ${libro.prezzo}</p>  
+    <a href="#" class="btn btn-primary">Prenota</a>
   </div>
 </div>    
     
