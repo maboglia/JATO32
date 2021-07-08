@@ -23,12 +23,12 @@
 	
 	const URL = "/api/libri/all";
 
-	fetch(URL).then(j => j.json()).then(libri => 
-	{
-		for(let libro of libri){//scorro l'intera collezione di libri
-			let tr = document.createElement('tr');//creo la riga
-			let td = document.createElement('td');//creo la cella
-			td.innerHTML = libro.titolo;//metto il valore nella cella
+	fetch(URL).then(j => j.json()).then(libri =>
+    {
+    	for(let libro of libri){//scorro l'intera la collezione
+    		let tr = document.createElement('tr');//creo la riga
+    		let td = document.createElement('td');//creo la cella
+    		td.innerHTML = "<a href='/mvc/libro/"+libro.id+"'>" + libro.titolo + "</a>";//metto il valore nella cella
 			
 			tr.appendChild(td);//aggiungo la cella alla riga
 			
