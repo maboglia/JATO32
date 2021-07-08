@@ -19,12 +19,12 @@ public class LibroCtrl {
 	@Autowired
 	private LibroService ls;
 	
-	@GetMapping("/all")
+	@GetMapping("")
 	List<Libro> tutti(){
 		return ls.trovaTutti();
 	}
 	
-	@GetMapping("/one/{id}")
+	@GetMapping("/{id}")
 	Libro trovaUno(@PathVariable("id") int id) {
 		return ls.trovaUno(id);
 	}
