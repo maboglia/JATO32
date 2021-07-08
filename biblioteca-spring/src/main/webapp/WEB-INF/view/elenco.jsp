@@ -3,7 +3,6 @@
 
 <%@ include file="header.jsp" %>
 
-<h1>Libreria</h1>
 
 <table id="elenco">
   <tr>

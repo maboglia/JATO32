@@ -1,7 +1,6 @@
 <%@ include file="header.jsp" %>
 
-    
-    <h1>Dettaglio Libro</h1>
+
   
     
 <div class="card" style="width: 18rem;">
