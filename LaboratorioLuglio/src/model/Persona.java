@@ -1,6 +1,6 @@
 package model;
 
-public class Persona {
+public class Persona implements Comparable<Persona>{
 
 	private String nome;
 	private int eta;
@@ -40,6 +40,12 @@ public class Persona {
 	@Override
 	public String toString() {
 		return "Persona [nome=" + nome + ", eta=" + eta + ", disponibile=" + disponibile + "]";
+	}
+
+	@Override
+	public int compareTo(Persona o) {
+		// confronto il nome dell'oggetto corrente con il nome dell'oggetto passato in argomento: o
+		return this.nome.compareTo(o.nome);
 	}
 	
 	

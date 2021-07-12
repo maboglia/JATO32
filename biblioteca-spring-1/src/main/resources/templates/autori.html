@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" xmlns:th="https://www.thymeleaf.org">
+<title th:text="Autori">Insert title here</title>
+</head>
+<body>
+
+<ul>
+  <li><a href="test.html" th:href="@{/libri}">libri</a></li>
+  <li><a href="test.html" th:href="@{/autori}">autori</a></li>
+</ul>
+
+
+
+	<h1 th:text="Autori"></h1>
+	
+	<ul th:each="autore : ${autori}">
+	  <li><a href="test.html" th:href="@{'/libri/autore/'+${autore.id}}" >
+	  <span th:text="${autore.nome} + ' ' + ${autore.cognome}"></span>
+	  </a> </li>
+	</ul>
+
+
+</body>
+</html>
