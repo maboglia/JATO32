@@ -1,0 +1,13 @@
+package gestione.editori;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class BibliotecaEvolutionApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(BibliotecaEvolutionApplication.class, args);
+	}
+
+}
