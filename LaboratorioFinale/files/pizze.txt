@@ -1,0 +1,54 @@
+Pizza La Perla;pomodoro, mozzarella, funghi, uovo, peperoncino;7.5
+Pizza Amalfitana;pomodoro, aglio, acciughe, peperoncino, origano;5
+Pizza Margherita;pomodoro, mozzarella,origano;5
+Pizza Napoletana;pomodoro, mozzarella, origano, acciughe;5.5
+Pizza Marinara;pomodoro, aglio, origano;4.5
+Pizza al Prosciutto;pomodoro, mozzarella, prosciutto, origano;6
+Pizza ai Funghi;pomodoro, mozzarella,funghi, origano;6.5
+Pizza al Prosciutto e Funghi;pomodoro, mozzarella, prosciutto, funghi, origano;6.5
+Pizza 4 Stagioni;pomodoro, mozzarella,prosciutto, funghi, carciofini, origano;6.5
+Pizza Capricciosa;pomod., mozz., prosciutto, funghi, carciofini, acciughe, origano;7
+Pizza ai Frutti di Mare;pomodoro, mozzarella, frutti di mare;7.5
+Pizza ai 4 Formaggi;pomodoro, mozzarella, fontina, gorgonzola, grana;7
+Pizza alle Verdure;pomodoro, mozzarella, verdure, origano;6.5
+Pizza al Prosciutto Crudo;pomodoro, mozzarella, prosciutto crudo;7
+Pizza alla Siciliana;pomodoro, mozzarella, acciughe, olive, peperoncino, origano;6
+Pizza alla Pugliese;pomodoro, mozzarella, cipolla, origano;6
+Pizza al Salame Piccante;pomodoro, mozzarella, salame piccante, origano;6.5
+Pizza Gigi;pomodoro, pomodoro fresco, mozz. di bufala, prosciutto, acciughe;8
+Pizza al Tonno;pomodoro, mozzarella, tonno, origano;6.5
+Pizza ai Gamberetti;pomodoro, mozzarella, gamberetti;7.5
+Pizza a Sorpresa;pomodoro, mozzarella, fantasia del pizzaiolo;7.5
+Pizza ai Calamari;pomodoro, mozzarella, calamari fritti;7.5
+Pizza alla Rucola;pomodoro, mozzarella, rucola, origano;6.5
+Pizza allo Speck;pomodoro, mozzarella, speck;7
+Pizza Mari e Monti;pomodoro, mozzarella, frutti di mare, funghi;8
+Pizza ai Wurstel;pomodoro, mozzarella, wurstel, origano;6.5
+Soufflè Napoletano;pomodoro, mozzarella, prosciutto, funghi, carciofini, uovo;7.5
+Pizza con Salsiccia Fresca;pomodoro, mozzarella, salsiccia, origano;6.5
+Pizza ai Funghi Porcini;pomodoro, mozzarella, funghi porcini, origano;7.5
+Pizza alla Romana;pomodoro, mozzarella, acciughe, capperi, origano;6
+Pizza con Pancetta;pomodoro, mozzarella, pancetta;7
+Pizza Boscaiola; pomodoro, mozzarella, bresaola, rucola, scaglie di grana;8
+Pizza Brindisina;pomodoro, mozzarella, cipolla, olive, capperi, origano;6.5
+Pizza Mediterranea;pomodoro, mozzarella, provola, melanzane, speck;8
+Pizza al Salmone;pomodoro, mozzarella, salmone;7.5
+Pizza Trevisana;pomodoro, mozzarella, funghi, provola, radicchio;8
+Pizza Zola e Mele;pomodoro, mozzarella, zola, mele;7.5
+Pizza Americana;pomodoro, mozzarella, patatine fritte;6.5
+Pizza Asparagi e Uovo;pomodoro, mozzarella, asparagi, uovo, origano;7
+Pizza Messicana;pomodoro, mozzarella, pancetta, fagioli, peperoncino;8
+Pizza Suocera;pomodoro, mozzarella, salame piccante, peperoni, origano;7.5
+Pizza Bufala;pomodoro, mozzarella di bufala, basilico;6.5
+Pizza Primavera;pomodoro fresco, mozzarella, piselli, mais;6.5
+Pizza Salsiccia e Friarielli;pomodoro, mozzarella, salsiccia, friarielli;7.5
+Calzone Liscio;pomodoro, mozzarella, prosciutto;6.5
+Calzone Farcito;pomodoro, mozzarella, prosciutto, funghi, carciofini;7
+Calzone La Perla;pomodoro, mozzarella, funghi, salame piccante;7.5
+Focaccia Bianca;olio, sale, origano;2.5
+Focaccia Tramonti;pomodorini, mozzarella, crudo, rucola, scaglie di grana, origano;8
+Focaccia Rustica;cipolle, olive, acciughe, origano;6.5
+Focaccia Tirolese;speck, fontina;7
+Focaccia Sfiziosa;gamberetti, rucola, radicchio, mais;8
+Focaccia Tricolore;pomodorini, mozzarella, rucola, origano;6.5
+Focaccia Caprese;pomodorini, mozzarella di bufala, basilico;6.5
