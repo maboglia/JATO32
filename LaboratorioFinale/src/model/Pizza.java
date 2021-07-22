@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -34,8 +35,11 @@ public class Pizza implements Comparable<Pizza>{
 	} 
 	
 	public boolean trovaIngrediente(String i) {
+		
 		for (int j = 0; j < this.ingredienti.size(); j++) {
-			return this.ingredienti.get(j).nome.equals(i);
+			if (this.ingredienti.get(j).nome.equals(i)) {
+				return true;
+			}
 			
 		}
 		return false;
@@ -54,13 +58,13 @@ public class Pizza implements Comparable<Pizza>{
 	}
 
 	private double prezzo;
-	private List<Ingrediente> ingredienti;
+	private List<Ingrediente> ingredienti = new ArrayList<>();
 	
 	public Pizza() {
 		this.idPizza=contaPizze++;
 	}
 	
-	public Pizza(String nome, double prezzo, List<Ingrediente> ingredienti) {
+	public Pizza(String nome, double prezzo) {
 		this();
 		this.nome = nome;
 		this.prezzo = prezzo;

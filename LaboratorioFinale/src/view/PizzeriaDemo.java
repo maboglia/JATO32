@@ -23,7 +23,7 @@ public class PizzeriaDemo {
 		mp
 			.getPizze()//list pizze
 			.stream()
-			//.filter(p -> p.trovaIngrediente("acciughe"))//illimitate operazioni intermedie
+			.filter(p -> p.trovaIngrediente("acciughe"))//illimitate operazioni intermedie
 			.forEach(pizza -> System.out.println("seduto al tavolo, consumo " + pizza));//1 sola operazione terminale
 		
 		
