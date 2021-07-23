@@ -21,7 +21,7 @@ public class Pizza implements Comparable<Pizza>{
 		}
 		@Override
 		public String toString() {
-			return "Ingrediente [nome=" + nome + ", quantita=" + quantita + "]";
+			return nome + ", " + quantita + "";
 		}
 	}
 
@@ -58,17 +58,17 @@ public class Pizza implements Comparable<Pizza>{
 	}
 
 	private double prezzo;
-	private List<Ingrediente> ingredienti = new ArrayList<>();
+	private List<Ingrediente> ingredienti;
 	
 	public Pizza() {
 		this.idPizza=contaPizze++;
+		this.ingredienti = new ArrayList<>();
 	}
 	
 	public Pizza(String nome, double prezzo) {
 		this();
 		this.nome = nome;
 		this.prezzo = prezzo;
-		this.ingredienti = ingredienti;
 	}
 
 	public String getNome() {
